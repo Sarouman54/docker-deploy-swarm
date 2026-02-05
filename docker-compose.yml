@@ -1,0 +1,12 @@
+services:
+        web:
+                image: nginx:latest
+                ports:
+                        - "80:80"
+                deploy:
+                        replicas: 3
+
+        db:
+                image: redis:alpine
+                deploy:
+                        replicas: 1
